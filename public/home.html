@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+    <html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Home</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Great+Vibes&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/home.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="top">
+                <div class="top-left">
+                    <h1 class="logo">Thrive</h1>
+                </div>
+                <div class="top-right">
+                    <span class="motto">Life's Fullest- One Check at a Time</span>
+                    <button id="logoutBtn" class="logout-btn">Logout</button>
+                </div>
+            </div>
+        
+            <div class="bottom">
+                <div class="left">
+                    <div class="inner-rect">
+                        <div class="inner-content">
+                            <div class="thrive-meter">Thrive Meter</div>
+                            <canvas id="pieChart" class="pie-chart"></canvas>
+                            <div class="progress-text">0% of the way there</div>
+                            <div class="goals-total">0 goals total</div>
+                            <div class="goals-completed">0 goals completed</div>
+                            <div class="motivation-text">
+                                Keep thriving—one check closer! Every mark is momentum toward your fullest life.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="right-top">
+                        <div class="top-rect">
+                            <div class="tabs">
+                                <div class="tab active">Active Goals</div>
+                                <div class="tab">Completed</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-bottom">
+                        <div class="bottom-rect"></div>
+                        <div class="completed-rect" style="display:none;"></div>
+                        <div class="add-goal-button">+</div>
+                    </div>
+                </div>
+            
+            </div>
+        
+            <div class="add-goal-modal" id="addGoalModal">
+                <div class="modal-content">
+                    <span class="close-button" id="closeModal">&times;</span>
+                    <h2 class="modal-title" id="modalTitle">Add New Goal</h2>
+                    <form id="addGoalForm">
+                        <label for="goalName">Goal Name</label>
+                        <input type="text" id="goalName" name="goalName" placeholder="Enter goal name" required>
+                        <label for="goalDesc">Goal Description</label>
+                        <textarea id="goalDesc" name="goalDesc" placeholder="Enter goal description" required></textarea>
+                        <div class="button-container">
+                            <button type="submit" id="modalSaveButton">Add Goal</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
+            <div class="goal-details-modal" id="goalDetailsModal">
+                <div class="details-content">
+                    <span class="details-close" id="closeDetailsModal">&times;</span>
+                    <h2 id="detailsTitle">Goal Details</h2>
+                    <p id="detailsDescription"></p>
+                    <div class="details-buttons">
+                        <button id="editGoalBtn" class="edit-btn">Edit</button>
+                        <button id="completeGoalBtn" class="complete-btn">Complete</button>
+                        <button id="deleteGoalBtn" class="delete-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="successModal" class="success-modal" style="display:none;">
+                <div class="success-content">
+                    <span id="successMessage"></span>
+                </div>
+            </div>
+        </div>
+        <script src="js/home.js"></script>
+    </body>
+</html>

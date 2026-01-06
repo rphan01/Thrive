@@ -1,0 +1,583 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+.container{
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+.top {
+    height: 15%; 
+    display: flex;
+    font-family: "Great Vibes";
+    background: #2C3E50;
+}
+.top-left {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    font-size: 96px;
+    background: linear-gradient(
+        90deg,
+        #F39C12 0%,
+        #FCDEB6 64%,
+        #FFF8F8 100%
+    );
+    background-clip: text;
+    color: transparent;
+    padding: 0.15em 0.15em;
+    margin-top: 0.8em;
+}
+@media (max-width: 992px){
+    .logo{
+        font-size: 72px; 
+    }
+}
+
+@media (max-width: 576px){
+    .logo {
+        font-size: 55px;  
+    }
+}
+.top-right{
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 14%;
+    align-items: center;
+}
+.motto{
+    font-size: 64px;
+    background: linear-gradient(
+        90deg,
+        #F39C12 0%,
+        #FCDEB6 64%,
+        #FFF8F8 100%
+    );
+    background-clip: text;
+    color: transparent;
+    padding: 0 0.15em; 
+}
+@media (max-width: 1300px){
+    .motto{
+        font-size: 50px;  
+    }
+}
+@media (max-width: 992px){
+    .motto{
+        font-size: 30px; 
+    }
+}
+
+@media (max-width: 576px){
+    .motto{
+        font-size: 22px;
+    }
+}
+.logout-btn{
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #FFB3B3; 
+    color: #000000;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.logout-btn:hover{
+    background-color: #E57373; 
+}
+@media (max-width: 992px){
+    .logout-btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+        top: 6px;
+        right: 6px;
+        border-radius: 0.4rem;
+    }
+}
+.bottom{
+    height: 85%;        
+    display: flex;
+}
+.left{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    background: #2C3E50;
+}
+.inner-rect{
+    width: 86%;
+    height: 97%;
+    border: 3px solid #FCDEB6;  
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    padding: 1em 0;  
+}
+.inner-content{
+    display: flex;
+    flex-direction: column;      
+    justify-content: space-around; 
+    align-items: center;          
+    height: 95%;                 
+    width: 90%;                   
+}
+.thrive-meter{
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    font-weight: 500; /* medium bold */
+    color: #FCDEB6;
+    text-align: center;
+}
+  
+.pie-chart{
+    max-width: 70%;            
+    aspect-ratio: 1 / 1; 
+    color: #FCDEB6;    
+}
+  
+.progress-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #FCDEB6;
+    text-align: center;
+}
+  
+.goals-total,
+.goals-completed{
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFF8F8;
+    text-align: center;
+}
+  
+.motivation-text{
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #FCDEB6;
+    text-align: center;
+    max-width: 90%;  
+}
+@media (max-width: 1300px){
+    .thrive-meter{
+        font-size: 28px;
+    }
+    .progress-text{
+        font-size: 24px;
+    }
+    .goals-total,
+    .goals-completed{
+        font-size: 20px;
+    }
+    .motivation-text{
+        font-size: 24px;
+    }
+}
+@media (max-width: 576px){
+    .thrive-meter{
+        font-size: 22px;
+    }
+    .progress-text{
+        font-size: 18px;
+    }
+    .goals-total,
+    .goals-completed{
+        font-size: 16px;
+    }
+    .motivation-text{
+        font-size: 18px;
+    }
+}
+
+.right{
+    width: 70%;          
+    flex-direction: column; 
+}
+.right-top{
+    height: 7%;      
+    display: flex;  
+    padding-left: 35%;
+    background: #2C3E50;
+    
+}
+.top-rect{
+    width: 36%;  
+    height: 74%;               
+    background-color: #FFF8F8; 
+    border-radius: 20px;        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabs{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8em;
+    white-space: nowrap; 
+}
+  
+.tab{
+    padding: 0.3em 1em;         
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+    text-overflow: ellipsis;
+}
+  
+.tab.active{
+    background-color: #FCDEB6;
+    color: #2C3E50;
+    font-weight: bold;
+}
+  
+.tab:not(.active){
+    color: #000000;
+    opacity: 0.6;
+    background-color: transparent;
+}
+@media (max-width: 992px) {
+    .top-rect {
+        width: 50%;  
+        height: 70%;
+    }
+    .tabs {font-size: 0.7em;}
+    .tab { padding: 0.2em 0.8em; }
+}
+@media (max-width: 160px) {
+    .top-rect {
+        width: 90%; 
+        height: 60%;
+        transform: translateX(-20%);
+       
+    }
+    .tabs {font-size: 0.6em; }
+    .tab {padding: 0.15em 0.5em;}
+}
+@media (max-width: 576px) {
+    .top-rect {
+        width: 90%; 
+        height: 60%;
+        transform: translateX(-20%);
+       
+    }
+    .tabs {font-size: 0.6em; }
+    .tab {padding: 0.15em 0.5em;}
+}
+
+.right-bottom{
+    position: relative;
+    height: 93%;   
+    background: #2C3E50;       
+}
+
+.bottom-rect{
+    width: 97%;
+    height: 96%;
+    background-color: #FFF8F8;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;            
+    justify-content: flex-start;
+    padding: 1%;
+    overflow-y: auto;  
+    overflow-x: hidden; 
+    align-content: flex-start;
+}
+.completed-rect{
+    width: 97%;
+    height: 96%;
+    background-color: #FFF8F8;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: flex-start;
+    padding: 1%;
+    position: relative;
+    overflow-y: auto;  
+    overflow-x: hidden; 
+    align-content: flex-start;
+}
+  
+.goal-card{
+    width: 23%;
+    height: 25%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+  
+    display: flex;
+    flex-direction: column;   
+}
+@media (max-width: 992px) {
+    .goal-card {
+        width: 48%; 
+        margin-bottom: 2%; 
+    }
+}
+@media (max-width: 576px) {
+    .goal-card {
+        width: 98%;
+        margin-bottom: 2%;
+    }
+}
+  
+.goal-name{
+    flex: 1;
+    background-color: #FCDEB6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goal-desc{
+    flex: 2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-goal-button{
+    position: absolute;
+    bottom: 1%;    
+    right: 1%;     
+    
+    width: 7%;
+    height: 11%;
+    
+    background-color: #FCDEB6;
+    border-radius: 50%;  
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;      
+    font-weight: bold;
+    color: #2C3E50;
+    
+    cursor: pointer;      
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
+    transition: transform 0.2s;
+}
+@media (max-width: 992px){
+    .add-goal-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.7em;
+    }
+}
+@media (max-width: 576px){
+    .add-goal-button {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5em;
+    }
+}
+  
+.add-goal-button:hover{
+    transform: scale(1.1); 
+}
+.add-goal-modal{
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    font-family: 'Oswald';
+}
+.modal-content{
+    background-color: #FFFFFF;
+    padding: 2em;
+    border-radius: 20px;
+    width: 40%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    position: relative;
+}
+.add-goal-modal{
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    font-family: 'Oswald';
+}
+  
+.modal-title{
+    text-align: center;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.modal-content label{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 0.3em;
+    color: #2C3E50;
+    display: block;
+}
+  
+.modal-content input,
+.modal-content textarea{
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 1em;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center; 
+    margin-top: 1em;
+}
+
+.modal-content button{
+    background-color: #FCDEB6;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1em;
+}
+.close-button{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.goal-details-modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    font-family: 'Oswald';
+}
+
+.details-content{
+    background: #FFFFFF;
+    padding: 2em;
+    width: 40%;
+    max-width: 450px;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.details-close{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.details-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.details-buttons button{
+    padding: 0.6em 1.2em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Oswald';
+    font-size: 16px;
+}
+
+.edit-btn{
+    background: #FCDEB6;
+    color: #000000;
+}
+
+.complete-btn{
+    background: #F0FCB6;
+    color: #000000;
+}
+ 
+.delete-btn{
+    background: #FF9999;
+    color: #000000;
+}
+@media (max-width: 576px){
+    .details-buttons{
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    .details-buttons button{
+        width: 100%;  
+        font-size: 14px;     
+    }
+}
+
+.success-modal{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #FCDEB6;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+.success-modal.show{
+    opacity: 1;
+}
+.success-content{
+    font-size: 16px;
+    font-weight: bold;
+}

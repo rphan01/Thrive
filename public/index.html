@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thrive | Login</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  </head>
+  
+  <body class="login-background">
+  
+    <div class="auth-wrapper">
+    
+      <h1 class="thrive-title">Thrive</h1>
+    
+      <div class="auth-card">
+        <h2 class="auth-header">Welcome Back!</h2>
+        <p class="auth-sub">Keep thriving.</p>
+      
+        <form id="loginForm" novalidate aria-label="Login form">
+        
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email"
+              required 
+              aria-required="true" 
+              aria-invalid="false"
+              placeholder="Enter your email"
+            />
+            <p class="error-msg" id="emailError" role="alert"></p>
+          </div>
+        
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input 
+              type="password" 
+              id="password" 
+              name="password"
+              required 
+              minlength="8" 
+              aria-required="true" 
+              aria-invalid="false"
+              placeholder="Enter your password"
+            />
+            <p class="error-msg" id="passwordError" role="alert"></p>
+          </div>
+        
+          <button type="submit" class="auth-btn">Log In</button>
+        </form>
+      
+        <p class="auth-footer">
+          Don’t have an account? <a href="signup.html">Sign up</a>
+        </p>
+      
+      </div>
+    </div>
+  
+    <script src="js/login.js"></script>
+  </body>
+</html>
